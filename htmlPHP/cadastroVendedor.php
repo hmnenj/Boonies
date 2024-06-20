@@ -1,24 +1,24 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Boonies</title>
+    <title>Document</title>
 </head>
 <body>
-    <h1>Boonies - Cadastro Vendedor</h1>
+<h1>Boonies - Cadastro Vendedor</h1>
     <form method="post">
         <div>
-            <label for="nome">Nome </label>
-            <input type="text" name="nome" id="nome">
+            <input type="text" name="nome" id="nome" placeholder="nome">
         </div>
         <div>
-            <label for="email">E-mail </label>
-            <input type="email" name="email" id="email">
+            <input type="email" name="email" id="email" placeholder="email">
         </div>
         <div>
-            <label for="senha">Senha </label>
-            <input type="password" name="senha" id="senha">
+            <input type="password" name="senha" id="senha" placeholder="senha">
+        </div>
+        <div>
+            <input type="number" name="CNPJ" id="CNPJ" placeholder="CNPJ">
         </div>
         <div>
             <button type="submit">Cadastrar-se</button>
@@ -29,6 +29,7 @@
         $nome = $_POST['nome'];
         $email = $_POST['email'];
         $senha = $_POST['senha'];
+        $CNPJ = $_POST['CNPJ'];
  
         $banco = "dadosVendedor.json";
         $dados = [];
@@ -39,13 +40,15 @@
         $novo_dado = [
             'nome' => $nome,
             'email' => $email,
-            'senha' => $senha
+            'senha' => $senha,
+            'CNPJ' => $CNPJ
         ];
         $dados[] = $novo_dado;
         $json = json_encode($dados);
  
         if (file_put_contents($banco, $json)) {
             echo "Dados cadastrados com sucesso!";
+            header("Location: inicioVendedor.php");
         }
     }
     ?>

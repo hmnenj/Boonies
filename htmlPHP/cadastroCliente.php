@@ -9,16 +9,13 @@
     <h1>Boonies - Cadastro Cliente</h1>
     <form method="post">
         <div>
-            <label for="nome">Nome </label>
-            <input type="text" name="nome" id="nome">
+            <input type="text" name="nome" id="nome" placeholder="nome">
         </div>
         <div>
-            <label for="email">E-mail </label>
-            <input type="email" name="email" id="email">
+            <input type="email" name="email" id="email" placeholder="email">
         </div>
         <div>
-            <label for="senha">Senha </label>
-            <input type="password" name="senha" id="senha">
+            <input type="password" name="senha" id="senha" placeholder="sena">
         </div>
         <div>
             <button type="submit">Cadastrar-se</button>
@@ -46,6 +43,7 @@
  
         if (file_put_contents($banco, $json)) {
             echo "Dados cadastrados com sucesso!";
+            header("Location: inicioCliente.html");
         }
     }
     ?>

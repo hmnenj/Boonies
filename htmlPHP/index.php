@@ -11,7 +11,7 @@
             <button><a href="./cadastroCliente.php">Quero comprar</a></button>
         </div>
         <div>
-            <button><a href="./cadastroVendedor">Quero Vender</a></button>
+            <button><a href="./cadastroVendedor.php">Quero Vender</a></button>
         </div>
 
     </form>
