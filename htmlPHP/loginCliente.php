@@ -39,9 +39,11 @@
             }
             
             if ($usuario_encontrado) {
-                echo "Login realizado com sucesso!";
-                header("Location: inicioCliente.html");
-                exit;
+                $url = 'inicioCliente.php';
+                echo "<script type='text/javascript'>
+                alert('Login realizado com sucesso!');
+                window.location.href = '$url';
+                </script>";
             } else {
                 echo "E-mail ou senha incorretos.";
             }

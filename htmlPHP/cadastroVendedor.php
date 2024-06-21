@@ -47,8 +47,13 @@
         $json = json_encode($dados);
  
         if (file_put_contents($banco, $json)) {
-            echo "Dados cadastrados com sucesso!";
-            header("Location: inicioVendedor.php");
+            $url = 'inicioVendedor.php';
+            echo "<script type='text/javascript'>
+            alert('Dados cadastrados com sucesso!');
+            window.location.href = '$url';
+            </script>";
+        } else {
+            echo "Erro ao cadastrar";
         }
     }
     ?>

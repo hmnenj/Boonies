@@ -9,13 +9,19 @@
     <h1>Boonies - Cadastro Cliente</h1>
     <form method="post">
         <div>
-            <input type="text" name="nome" id="nome" placeholder="nome">
+            <input type="text" name="nome" id="nome" placeholder="nome" required>
         </div>
         <div>
-            <input type="email" name="email" id="email" placeholder="email">
+            <input type="email" name="email" id="email" placeholder="email" required>
         </div>
         <div>
-            <input type="password" name="senha" id="senha" placeholder="sena">
+            <input type="text" name="CPF" id="CPF" placeholder="CPF" required>
+        </div>
+        <div>
+            <input type="number" name="CEP" id="CEP" placeholder="CEP" required>
+        </div>
+        <div>
+            <input type="password" name="senha" id="senha" placeholder="senha" required>
         </div>
         <div>
             <button type="submit">Cadastrar-se</button>
@@ -25,6 +31,8 @@
     if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         $nome = $_POST['nome'];
         $email = $_POST['email'];
+        $CPF = $_POST['CPF'];
+        $CEP = $_POST['CEP'];
         $senha = $_POST['senha'];
  
         $banco = "dadosCliente.json";
@@ -36,14 +44,22 @@
         $novo_dado = [
             'nome' => $nome,
             'email' => $email,
+            'CPF' => $CPF,
+            'CEP' => $CEP,
             'senha' => $senha
+
         ];
         $dados[] = $novo_dado;
         $json = json_encode($dados);
  
         if (file_put_contents($banco, $json)) {
-            echo "Dados cadastrados com sucesso!";
-            header("Location: inicioCliente.html");
+            $url = 'inicioCliente.php';
+            echo "<script type='text/javascript'>
+            alert('Dados cadastrados com sucesso!');
+            window.location.href = '$url';
+            </script>";
+        } else {
+            echo "Erro ao cadastrar";
         }
     }
     ?>

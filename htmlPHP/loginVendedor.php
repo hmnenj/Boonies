@@ -39,9 +39,11 @@
             }
             
             if ($usuario_encontrado) {
-                echo "Login realizado com sucesso!";
-                header("Location: inicioVendedor.php");
-                exit;
+                $url = 'inicioVendedor.php';
+                echo "<script type='text/javascript'>
+                alert('Dados cadastrados com sucesso!');
+                window.location.href = '$url';
+                </script>";
             } else {
                 echo "E-mail ou senha incorretos.";
             }

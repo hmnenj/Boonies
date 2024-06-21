@@ -1,32 +1,8 @@
 [
     {
-        "nome": "heloysa",
-        "email": "heloysacarmo7@gmail.com",
-        "senha": "123",
-        "CNPJ": null
-    },
-    {
-        "nome": "heloysa",
-        "email": "heloysacarmo7@gmail.com",
-        "senha": "123",
-        "CNPJ": "11111111111"
-    },
-    {
-        "nome": "heloysa",
-        "email": "larovisk145@gmail.com",
-        "senha": "789",
-        "CNPJ": "777777777777"
-    },
-    {
-        "nome": "heloysa",
-        "email": "heloysa.ash@gmail.com",
-        "senha": "123",
-        "CNPJ": "777777777"
-    },
-    {
-        "nome": "heloysa",
-        "email": "heloysa.ash@gmail.com",
-        "senha": "123",
-        "CNPJ": "777777777"
+        "nome": "ana",
+        "email": "anabanana@gmail.com",
+        "senha": "777",
+        "CNPJ": "777777777777777777"
     }
 ]
