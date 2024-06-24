@@ -4,6 +4,23 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Boonies</title>
+    <script>
+        function aplicarMascaraCPF(input) {
+            let value = input.value;
+            value = value.replace(/\D/g, "");
+            value = value.replace(/(\d{3})(\d)/, "$1.$2");
+            value = value.replace(/(\d{3})(\d)/, "$1.$2");
+            value = value.replace(/(\d{3})(\d{1,2})$/, "$1-$2");
+            input.value = value;
+        }
+
+        function aplicarMascaraCEP(input) {
+            let value = input.value;
+            value = value.replace(/\D/g, "");
+            value = value.replace(/(\d{5})(\d{1,3})$/, "$1-$2");
+            input.value = value;
+        }
+    </script>
 </head>
 <body>
     <h1>Boonies - Cadastro Cliente</h1>
@@ -15,10 +32,10 @@
             <input type="email" name="email" id="email" placeholder="email" required>
         </div>
         <div>
-            <input type="text" name="CPF" id="CPF" placeholder="CPF" required>
+            <input type="text" name="CPF" id="CPF" placeholder="CPF" required oninput="aplicarMascaraCPF(this)" maxlength="14" minlength="14">
         </div>
         <div>
-            <input type="number" name="CEP" id="CEP" placeholder="CEP" required>
+            <input type="text" name="CEP" id="CEP" placeholder="CEP" required oninput="aplicarMascaraCEP(this)" maxlength="9" minlength="9">
         </div>
         <div>
             <input type="password" name="senha" id="senha" placeholder="senha" required>
@@ -47,7 +64,6 @@
             'CPF' => $CPF,
             'CEP' => $CEP,
             'senha' => $senha
-
         ];
         $dados[] = $novo_dado;
         $json = json_encode($dados);
