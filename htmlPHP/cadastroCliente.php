@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Boonies</title>
+    <title>Boonies - Cadastro Cliente</title>
     <script>
         function aplicarMascaraCPF(input) {
             let value = input.value;
@@ -23,7 +23,7 @@
     </script>
 </head>
 <body>
-    <h1>Boonies - Cadastro Cliente</h1>
+<h1>Boonies - Cadastro Cliente</h1>
     <form method="post">
         <div>
             <input type="text" name="nome" id="nome" placeholder="nome" required>
@@ -32,10 +32,10 @@
             <input type="email" name="email" id="email" placeholder="email" required>
         </div>
         <div>
-            <input type="text" name="CPF" id="CPF" placeholder="CPF" required oninput="aplicarMascaraCPF(this)" maxlength="14" minlength="14">
+            <input type="text" name="CPF" id="CPF" placeholder="CPF" required oninput="aplicarMascaraCPF(this)">
         </div>
         <div>
-            <input type="text" name="CEP" id="CEP" placeholder="CEP" required oninput="aplicarMascaraCEP(this)" maxlength="9" minlength="9">
+            <input type="text" name="CEP" id="CEP" placeholder="CEP" required oninput="aplicarMascaraCEP(this)">
         </div>
         <div>
             <input type="password" name="senha" id="senha" placeholder="senha" required>
