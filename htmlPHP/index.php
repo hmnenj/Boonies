@@ -3,17 +3,31 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Boonies</title>
+    <link rel="stylesheet" href="index.css">
+    <title>bonny´s</title>
 </head>
-<body>
-    <h1></h1>
-        <div>
+<header> 
+    <div>
             <button><a href="./cadastroCliente.php">Quero comprar</a></button>
-        </div>
-        <div>
-            <button><a href="./cadastroVendedor.php">Quero Vender</a></button>
-        </div>
+    </div> 
+    <div>
+        <button><a href="./cadastroVendedor.php">Quero Vender</a></button>
+    </div>
+    <div class="search">
+        <form action="#">
+            <input type ="text" placeholder="pesquisar:" name="search">
+        </form>
+    </div>
+</header>
 
-    </form>
+<body>
+    <div class=logo>
+    <h1>bonny's</h1>
+     <img src="./uploads/bonnys.png" alt="bonny's">
+    </div>
+    <h1>bem-vindos!</h1>
+    <br>
+    <br>
+    <h1>mais vendidos:</h1>
 </body>
 </html>
