@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,6 +8,8 @@
 <body>
     <h1>Detalhes do Produto</h1>
     <?php
+    session_start();
+
     if (isset($_GET['index'])) {
         $index = $_GET['index'];
         $banco = "dadosProduto.json";
@@ -25,7 +27,10 @@
                 echo "<p>Preço: " . $produto['preco'] . "</p>";
                 echo "<p>Descrição: " . $produto['descricao'] . "</p>";
                 echo "<p>Categoria: " . $produto['categoria'] . "</p>";
-
+                echo "<form method='post' action='adicionarCarrinho.php'>";
+                echo "<input type='hidden' name='index' value='$index'>";
+                echo "<button type='submit'>Adicionar ao Carrinho</button>";
+                echo "</form>";
             } else {
                 echo "Produto não encontrado.";
             }

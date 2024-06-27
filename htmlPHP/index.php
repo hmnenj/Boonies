@@ -8,10 +8,10 @@
 <body>
     <h1></h1>
         <div>
-            <button><a href="./cadastroCliente.php">Quero comprar</a></button>
+            <button><a href="./loginCliente.php">Já tenho uma conta</a></button>
         </div>
         <div>
-            <button><a href="./cadastroVendedor.php">Quero Vender</a></button>
+            <button><a href="./cadastroCliente.php">Não tenho uma conta</a></button>
         </div>
 
     </form>
