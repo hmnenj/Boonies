@@ -1,12 +1,12 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Boonies - Cadastro de Produto</title>
 </head>
 <body>
-<h1>Boonies - Cadastro de Produto</h1>
+    <h1>Boonies - Cadastro de Produto</h1>
     <form method="post" enctype="multipart/form-data">
         <div>
             <input type="text" name="nome" id="nome" placeholder="Nome do Produto" required>
@@ -27,6 +27,7 @@
             <button type="submit">Cadastrar Produto</button>
         </div>
     </form>
+
     <?php
     if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         $nome = $_POST['nome'];
@@ -39,26 +40,39 @@
         $imagemTmp = $imagem['tmp_name'];
         $imagemDestino = 'uploads/' . $imagemNome;
 
+
         if (!is_dir('uploads')) {
             mkdir('uploads', 0777, true);
         }
-   
+
         if (move_uploaded_file($imagemTmp, $imagemDestino)) {
             $banco = "dadosProduto.json";
             $dados = [];
+
             if (file_exists($banco)) {
                 $extrair_dados = file_get_contents($banco);
                 $dados = json_decode($extrair_dados, true);
             }
+
+
+            $novo_id = 1;
+            if (!empty($dados)) {
+                $novo_id = end($dados)['id'] + 1;
+            }
+
+
             $novo_dado = [
+                'id' => $novo_id,
                 'nome' => $nome,
                 'preco' => $preco,
                 'descricao' => $descricao,
                 'categoria' => $categoria,
                 'imagem' => $imagemDestino
             ];
+
             $dados[] = $novo_dado;
-            $json = json_encode($dados);
+
+            $json = json_encode($dados, JSON_PRETTY_PRINT);
 
             if (file_put_contents($banco, $json)) {
                 echo "<script type='text/javascript'>

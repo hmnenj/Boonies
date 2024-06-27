@@ -24,21 +24,37 @@
     if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         $email = $_POST['email'];
         $senha = $_POST['senha'];
+        $adm = "adm@gmail.com";
+        $senhaadm = "senha123";
 
         $banco = "dadosCliente.json";
         if (file_exists($banco)) {
             $extrair_dados = file_get_contents($banco);
             $dados = json_decode($extrair_dados, true);
-            
+
             $usuario_encontrado = false;
-            foreach ($dados as $usuario) {
-                if ($usuario['email'] === $email && $usuario['senha'] === $senha) {
-                    $usuario_encontrado = true;
-                    break;
+            $adm_encontrado = false;
+
+
+            if ($email === $adm && $senha === $senhaadm) {
+                $adm_encontrado = true;
+            } else {
+
+                foreach ($dados as $usuario) {
+                    if ($usuario['email'] === $email && $usuario['senha'] === $senha) {
+                        $usuario_encontrado = true;
+                        break;
+                    }
                 }
             }
-            
-            if ($usuario_encontrado) {
+
+            if ($adm_encontrado) {
+                $url = 'inicioVendedor.php';
+                echo "<script type='text/javascript'>
+                alert('Login de administrador realizado com sucesso!');
+                window.location.href = '$url';
+                </script>";
+            } elseif ($usuario_encontrado) {
                 $url = 'inicioCliente.php';
                 echo "<script type='text/javascript'>
                 alert('Login realizado com sucesso!');
@@ -47,6 +63,8 @@
             } else {
                 echo "E-mail ou senha incorretos.";
             }
+        } else {
+            echo "Banco de dados não encontrado.";
         }
     }
     ?>
