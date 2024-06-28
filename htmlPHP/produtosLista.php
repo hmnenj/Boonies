@@ -31,6 +31,6 @@
         echo "Nenhum produto cadastrado.";
     }
     ?>
-    <a href="cadastroProduto.php">Cadastrar Novo Produto</a>
+    <a href="cadastroProduto.php">cadastrar novo produto</a>
 </body>
 </html>

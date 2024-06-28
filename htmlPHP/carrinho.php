@@ -3,10 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Carrinho de Compras</title>
+    <title>meus pedidos</title>
 </head>
 <body>
-    <h1>Carrinho de Compras</h1>
+    <h1>meus pedidos</h1>
     <?php
     session_start();
 
@@ -29,7 +29,7 @@
                         echo "<img src='" . $produto['imagem'] . "' alt='" . $produto['nome'] . "' width='50'>";
                     }
                     echo $produto['nome'] . " - R$ " . number_format($preco, 2, ',', '.');
-                    echo " <a href='removerCarrinho.php?index=$index'>Remover</a>";
+                    echo " <a href='removerCarrinho.php?index=$index'>remover</a>";
                     echo "</li>";
                 }
             }
@@ -40,12 +40,12 @@
         }
 
         echo "<form method='post' action='finalizarCompra.php'>";
-        echo "<button type='submit'>Finalizar Compra</button>";
+        echo "<button type='submit'>finalizar compra!</button>";
         echo "</form>";
     } else {
-        echo "Seu carrinho está vazio.";
+        echo "ainda não há pedidos :(";
     }
     ?>
-    <a href="listaProdutos.php">Continuar Comprando</a>
+    <a href="listaProdutos.php">continuar comprando</a>
 </body>
 </html>

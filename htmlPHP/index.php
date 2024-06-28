@@ -11,34 +11,41 @@
             <button><a href="./cadastroCliente.php">Quero comprar</a></button>
     </div> 
     <div>
-        <button><a href="./cadastroVendedor.php">Quero Vender</a></button>
+        <button><a href="./cadastroProduto.php">Quero Vender</a></button>
     </div>
     <div class="search">
         <form action="#">
             <input type ="text" placeholder="pesquisar:" name="search">
         </form>
-        <div>
-            <a href="./adicionarCarrinho.php">meus pedidos</a>
-        </div>
     </div>
+   <div><a href="./carrinho.php">meus pedidos</a></div>
 </header>
 
 <body>
     <div class=logo>
     <h1>bonny's</h1>
-     <img src="./uploads/bonnys.png" alt="bonny's">
+     <img src="./img/bonnys.png" alt="bonny's">
     </div>
     <h1>bem-vindos!</h1>
     <br>
-    <br>
-    <h1>mais vendidos:</h1>
-    <br>
-    <h3>terror:</h3>
-    <img src="./uploads/familiafeliz.jpg" alt="Uma Família Feliz">
-    <p>Uma Família Feliz - Raphael Montes
-    <img src="./uploads/coraline.jpg" alt="Coraline">
-    <p>Coraline - Neil Gaiman
-    <img src="./uploads/lab.jpg" alt="Labirinto do Fauno">
-    <p>Labirinto do Fauno - Guillermo del Toro e Cornelia Funke
+    <h1>lista de produtos</h1>
+    <?php
+    $banco = "dadosProduto.json";
+    if (file_exists($banco)) {
+        $extrair_dados = file_get_contents($banco);
+        $produtos = json_decode($extrair_dados, true);
+
+        echo "<ul>";
+        foreach ($produtos as $index => $produto) {
+            echo "<li>";
+            echo "<a href='detalhesProduto.php?index=$index'>" . $produto['nome'] . "</a>";
+            echo "</li>";
+        }
+        echo "</ul>";
+    } else {
+        echo "Nenhum produto cadastrado.";
+    }
+    ?>
+</body>
 </body>
 </html>
