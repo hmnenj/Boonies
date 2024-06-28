@@ -3,7 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Boonies - Cadastro Cliente</title>
+    <link rel="stylesheet" href="./css/cliente.css">
+    <title>bonny's - cadastro cliente</title>
     <script>
         function aplicarMascaraCPF(input) {
             let value = input.value;
@@ -23,8 +24,10 @@
     </script>
 </head>
 <body>
-<h1>Boonies - Cadastro Cliente</h1>
-    <form method="post">
+<div class="logo">
+     <center><a href= ./index.php><img src="./img/cbonnys.png" alt="bonny's"></center>
+    </div>
+   <center> <form method="post">
         <div>
             <input type="text" name="nome" id="nome" placeholder="nome" required>
         </div>
@@ -41,9 +44,10 @@
             <input type="password" name="senha" id="senha" placeholder="senha" required>
         </div>
         <div>
-            <button type="submit">Cadastrar-se</button>
+            <button type="submit">comece a ler!</button>
         </div>
-    </form>
+    </form></center>
+
     <?php
     if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         $nome = $_POST['nome'];
@@ -71,14 +75,14 @@
         if (file_put_contents($banco, $json)) {
             $url = 'inicioCliente.php';
             echo "<script type='text/javascript'>
-            alert('Dados cadastrados com sucesso!');
+            alert('dados cadastrados com sucesso!');
             window.location.href = '$url';
             </script>";
         } else {
-            echo "Erro ao cadastrar";
+            echo "erro ao cadastrar :(";
         }
     }
     ?>
-    <a href="./loginCliente.php">Já tem uma conta?</a>
+    <center><a class="jaconta" href="./loginCliente.php">já tem uma conta?</a></center>
 </body>
 </html>

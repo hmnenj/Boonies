@@ -1,0 +1,57 @@
+@font-face {
+    font-family: 'playlist';
+    src: url('../../fonte/Playlist\ Script.otf');
+}
+  
+body {
+    background-color: #E6AD9C;
+    font-family: 'playlist';
+    padding: 10px 10px; 
+}
+
+.jaconta{
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+   color:#ffff;
+   
+}
+
+form input {
+    border-radius: 25px;
+    background-color: #ffff;
+    opacity: 0.5;
+    padding: 13px 50px;
+    text-align: center;
+    font-size: 16px;
+    margin: 4px 2px;
+    border:none;
+}
+
+form input::placeholder{
+    color: #E6AD9C;
+    text-align: left;
+}
+
+.jaconta:visited {
+    color: #ffff;
+}
+
+button{
+    border-radius: 25px;
+    background-color: #ffff;
+    opacity: 0.5;
+    padding: 13px 50px;
+    text-align: center;
+    font-size: 16px;
+    margin: 4px 2px;
+    transition-duration: 0.4s;
+    cursor: pointer;
+    border:none;
+}
+
+button:hover {
+    background-color: gray;
+    color: #ffff;
+}
+
+
+

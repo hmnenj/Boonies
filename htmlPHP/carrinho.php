@@ -3,10 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>meus pedidos</title>
+    <link rel="stylesheet" href="./css/carrinho.css">
+    <title>meu carrinho</title>
 </head>
 <body>
-    <h1>meus pedidos</h1>
+    <h1>meu carrinho</h1>
     <?php
     session_start();
 
@@ -46,6 +47,6 @@
         echo "ainda não há pedidos :(";
     }
     ?>
-    <a href="listaProdutos.php">continuar comprando</a>
+    <a href="index.php">continuar comprando</a>
 </body>
 </html>

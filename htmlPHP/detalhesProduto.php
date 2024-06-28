@@ -3,10 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Detalhes do Produto</title>
+    <title>detalhes do produto</title>
+    <link rel="stylesheet" href="./css/detalhes.css">
 </head>
 <body>
-    <h1>Detalhes do Produto</h1>
+    <div class="container">
+    <h1>detalhes do produto</h1>
     <?php
     session_start();
 
@@ -23,24 +25,25 @@
                 if (isset($produto['imagem'])) {
                     echo "<img src='" . $produto['imagem'] . "' alt='" . $produto['nome'] . "' width='200'></p>";
                 }
-                echo "<p>Nome: " . $produto['nome'] . "</p>";
-                echo "<p>Preço: " . $produto['preco'] . "</p>";
-                echo "<p>Descrição: " . $produto['descricao'] . "</p>";
-                echo "<p>Categoria: " . $produto['categoria'] . "</p>";
-                echo "<form method='post' action='adicionarCarrinho.php'>";
-                echo "<input type='hidden' name='index' value='$index'>";
-                echo "<button type='submit'>Adicionar ao Carrinho</button>";
+                echo "<div class = 'detalhes'><p>Nome: " . $produto['nome'] . "</p>", "</div>";
+                echo "<div class = 'detalhes'><p>Preço: " . $produto['preco'] . "</p>", "</div>";
+                echo "<div class = 'detalhes'><p>Descrição: " . $produto['descricao'] . "</p>", "</div>";
+                echo "<div class = 'detalhes'><p>Categoria: " . $produto['categoria'] . "</p>", "</div>";
+                echo "<div class = 'detalhes'><form method='post' action='adicionarCarrinho.php'>", "</div>";
+                echo "<div class = 'detalhes'><input type='hidden' name='index' value='$index'>", "</div>";
+                echo "<div class=carrinho><button type='submit'><img src= './img/carrinho.png'></button></div>";
                 echo "</form>";
             } else {
-                echo "Produto não encontrado.";
+                echo "produto não encontrado.";
             }
         } else {
-            echo "Banco de dados não encontrado.";
+            echo "banco de dados não encontrado.";
         }
     } else {
-        echo "Nenhum produto selecionado.";
+        echo "nenhum produto selecionado.";
     }
     ?>
-    <a href="listaProdutos.php">Voltar para lista de produtos</a>
+    <a href="listaProdutos.php">voltar para lista de produtos</a>
+    </div>
 </body>
 </html>

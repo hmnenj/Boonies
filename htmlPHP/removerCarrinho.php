@@ -13,10 +13,10 @@ if (isset($_GET['index'])) {
     }
 
     echo "<script type='text/javascript'>
-    alert('Produto removido do carrinho!');
+    alert('produto removido do carrinho!');
     window.location.href = 'carrinho.php';
     </script>";
 } else {
-    echo "Produto não encontrado.";
+    echo "produto não encontrado.";
 }
 ?>

@@ -16,15 +16,15 @@ if (isset($_GET['index'])) {
                 window.location.href = 'listaClientes.php';
                 </script>";
             } else {
-                echo "Erro ao apagar cliente";
+                echo "erro ao apagar cliente";
             }
         } else {
-            echo "Cliente não encontrado.";
+            echo "cliente não encontrado.";
         }
     } else {
-        echo "Banco de dados não encontrado.";
+        echo "banco de dados não encontrado.";
     }
 } else {
-    echo "Nenhum cliente selecionado.";
+    echo "nenhum cliente selecionado.";
 }
 ?>

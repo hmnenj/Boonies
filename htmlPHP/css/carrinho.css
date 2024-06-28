@@ -6,9 +6,5 @@
 body {
     background-color: #E6AD9C;
     font-family: 'playlist';
-}
-  
-button {
-    border-radius: 25px;
-    background-color: #ffff;
+    padding: 10px 10px; 
 }

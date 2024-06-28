@@ -3,10 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Editar Cliente</title>
+    <title>editar cliente</title>
 </head>
 <body>
-    <h1>Editar Cliente</h1>
+    <h1>editar cliente</h1>
     <?php
     $banco = "dadosCliente.json";
     if (isset($_GET['index']) && file_exists($banco)) {
@@ -25,11 +25,11 @@
             $json = json_encode($clientes);
             if (file_put_contents($banco, $json)) {
                 echo "<script type='text/javascript'>
-                alert('Dados atualizados com sucesso!');
+                alert('dados atualizados com sucesso!');
                 window.location.href = 'listaClientes.php';
                 </script>";
             } else {
-                echo "Erro ao atualizar dados";
+                echo "erro ao atualizar dados";
             }
         }
     ?>

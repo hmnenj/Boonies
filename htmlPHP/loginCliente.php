@@ -3,11 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/logincliente.css">
     <title>Boonies - Login</title>
 </head>
 <body>
-    <h1>Login</h1>
-    <form method="post">
+    <div class="logo">
+     <center><a href= ./index.php><img src="./img/ebonnys.png" alt="ebonny's"></center>
+    </div>
+    <center><form method="post">
         <div>
             <label for="email">E-mail </label>
             <input type="email" name="email" id="email" required>
@@ -17,9 +20,9 @@
             <input type="password" name="senha" id="senha" required>
         </div>
         <div>
-            <button type="submit">Entrar</button>
+            <button type="submit">entrar</button>
         </div>
-    </form>
+    </form></center>
     <?php
     if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         $email = $_POST['email'];
@@ -51,23 +54,23 @@
             if ($adm_encontrado) {
                 $url = 'inicioVendedor.php';
                 echo "<script type='text/javascript'>
-                alert('Login de administrador realizado com sucesso!');
+                alert('login de administrador realizado com sucesso!');
                 window.location.href = '$url';
                 </script>";
             } elseif ($usuario_encontrado) {
                 $url = 'inicioCliente.php';
                 echo "<script type='text/javascript'>
-                alert('Login realizado com sucesso!');
+                alert('login realizado com sucesso!');
                 window.location.href = '$url';
                 </script>";
             } else {
-                echo "E-mail ou senha incorretos.";
+                echo "e-mail ou senha incorretos.";
             }
         } else {
-            echo "Banco de dados não encontrado.";
+            echo "banco de dados não encontrado.";
         }
     }
     ?>
-    <a href="./cadastroCliente.php">Ainda não tem uma conta?</a>
+   <center> <a class="semconta" href="./cadastroCliente.php">ainda não tem uma conta?</a></center>
 </body>
 </html>

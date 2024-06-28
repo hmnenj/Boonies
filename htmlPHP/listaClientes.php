@@ -3,10 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Lista de Clientes</title>
+    <title>lista de Clientes</title>
 </head>
 <body>
-    <h1>Lista de Clientes</h1>
+    <h1>lista de Clientes</h1>
     <?php
     $banco = "dadosCliente.json";
     if (file_exists($banco)) {

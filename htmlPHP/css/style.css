@@ -1,0 +1,81 @@
+@font-face {
+    font-family: 'playlist';
+    src: url('../../fonte/Playlist\ Script.otf');
+}
+  
+body {
+    background-color: #E6AD9C;
+    font-family: 'playlist';
+    padding: 10px 10px; 
+
+}
+
+button {
+    border-radius: 25px;
+    background-color: #ffff;
+    opacity: 0.5;
+    padding: 13px 50px;
+    text-align: center;
+    font-size: 16px;
+    margin: 4px 2px;
+    transition-duration: 0.4s;
+    cursor: pointer;
+    border:none;
+}
+
+button a {
+    text-decoration: none;
+}
+
+button:hover {
+    background-color: gray;
+    color: #ffff;
+}
+
+a:visited {
+    color: unset;
+}
+
+.search{
+    border-radius: 25px;
+    background-color: #ffff;
+    opacity: 0.5;
+    padding: 13px 50px; 
+    margin: 4px 2px;
+    margin-right: auto;
+    border:none;
+}
+
+.flex-container {
+    display: flex;
+  }
+
+
+.carrinho {
+    padding: 10px 10px;
+    font-size: larger;
+    color: #ffff;
+    text-transform: none;
+
+    
+}
+
+h1{
+    color: #ffff;
+    text-decoration: none;
+}
+
+a{
+    text-decoration: none;
+}
+
+.logo{
+    padding: 100px 50px; 
+}
+
+
+
+
+
+
+  
