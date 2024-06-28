@@ -3,25 +3,26 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./CSS/style.css">
     <title>bonny´s</title>
+    <link rel="stylesheet" href="./css/index.css">
 </head>
-<header> 
-    <div class>
-            <button><a href="./cadastroCliente.php">Quero comprar</a></button>
-    </div> 
-    <div>
-        <button><a href="./cadastroProduto.php">Quero Vender</a></button>
-    </div>
-    <div class="search">
-        <form action="#">
-            <input type ="text" placeholder="pesquisar:" name="search">
-        </form>
-    </div>
-   <div><a href="./carrinho.php">meus pedidos</a></div>
-</header>
 
 <body>
+    <header> 
+        <div class>
+                <button><a href="./cadastroCliente.php">Quero comprar</a></button>
+        </div> 
+        <div>
+            <button><a href="./cadastroProduto.php">Quero Vender</a></button>
+        </div>
+        <div class="search">
+            <form action="#">
+                <input type ="text" placeholder="pesquisar:" name="search">
+            </form>
+        </div>
+    <div><a href="./carrinho.php">meus pedidos</a></div>
+    </header>
+
     <div class=logo>
     <h1>bonny's</h1>
      <img src="./img/bonnys.png" alt="bonny's">
@@ -46,6 +47,5 @@
         echo "Nenhum produto cadastrado.";
     }
     ?>
-</body>
 </body>
 </html>

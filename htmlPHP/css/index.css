@@ -1,0 +1,14 @@
+@font-face {
+    font-family: 'playlist';
+    src: url('../../fonte/Playlist\ Script.otf');
+}
+  
+body {
+    background-color: #E6AD9C;
+    font-family: 'playlist';
+}
+  
+button {
+    border-radius: 25px;
+    background-color: #ffff;
+}
