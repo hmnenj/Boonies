@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./css/cliente.css">
-    <title>bonny's - cadastro cliente</title>
+    <link rel="stylesheet" href="./css/cadastroCliente.css">
+    <title>Boonies - Cadastro Cliente</title>
     <script>
         function aplicarMascaraCPF(input) {
             let value = input.value;
@@ -24,15 +24,15 @@
     </script>
 </head>
 <body>
-<div class="logo">
-     <center><a href= ./index.php><img src="./img/cbonnys.png" alt="bonny's"></center>
-    </div>
-   <center> <form method="post">
+    <div class="container">
+    <h1>Boonies - Cadastro Cliente</h1>
+
+    <form method="post">
         <div>
-            <input type="text" name="nome" id="nome" placeholder="nome" required>
+            <input type="text" name="nome" id="nome" placeholder="Nome" required>
         </div>
         <div>
-            <input type="email" name="email" id="email" placeholder="email" required>
+            <input type="email" name="email" id="email" placeholder="E-mail" required>
         </div>
         <div>
             <input type="text" name="CPF" id="CPF" placeholder="CPF" required oninput="aplicarMascaraCPF(this)">
@@ -41,12 +41,15 @@
             <input type="text" name="CEP" id="CEP" placeholder="CEP" required oninput="aplicarMascaraCEP(this)">
         </div>
         <div>
-            <input type="password" name="senha" id="senha" placeholder="senha" required>
+            <input type="password" name="senha" id="senha" placeholder="Senha" required>
         </div>
         <div>
-            <button type="submit">comece a ler!</button>
+            <button type="submit">Cadastrar-se</button>
         </div>
-    </form></center>
+    </form>
+
+    <a class="jaconta" href="./loginCliente.php">Já tem uma conta?</a>
+    </div>
 
     <?php
     if ($_SERVER['REQUEST_METHOD'] == 'POST') {
@@ -75,14 +78,13 @@
         if (file_put_contents($banco, $json)) {
             $url = 'inicioCliente.php';
             echo "<script type='text/javascript'>
-            alert('dados cadastrados com sucesso!');
+            alert('Dados cadastrados com sucesso!');
             window.location.href = '$url';
             </script>";
         } else {
-            echo "erro ao cadastrar :(";
+            echo "Erro ao cadastrar";
         }
     }
     ?>
-    <center><a class="jaconta" href="./loginCliente.php">já tem uma conta?</a></center>
 </body>
 </html>

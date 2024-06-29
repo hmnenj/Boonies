@@ -1,0 +1,50 @@
+@font-face {
+    font-family: 'playlist';
+    src: url('../../fonte/Playlist\ Script.otf');
+}
+
+body {
+    background-color: #E6AD9C;
+    font-family: 'playlist';
+    padding: 0;
+    color: #ffff;
+    margin: 0;
+}
+
+header {
+    background-color: rgba(255, 255, 255, 0.1);
+    padding: 10px;
+}
+
+.flex-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+button {
+    background-color: #ffff;
+    border: none;
+    border-radius: 25px;
+    padding: 15px 20px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+button a {
+    text-decoration: none;
+    color: #E6AD9C;
+    font-size: larger;
+}
+
+button:hover {
+    background-color: gray;
+}
+
+.logo img {
+    max-width: 100%;
+}
+
+h1 {
+    text-align: center;
+}

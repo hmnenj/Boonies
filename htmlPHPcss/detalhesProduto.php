@@ -4,11 +4,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>detalhes do produto</title>
-    <link rel="stylesheet" href="./css/detalhes.css">
+    <link rel="stylesheet" href="./css/detalhesProduto.css">
 </head>
 <body>
     <div class="container">
-    <h1>detalhes do produto</h1>
+    <h1>Detalhes do produto</h1>
     <?php
     session_start();
 

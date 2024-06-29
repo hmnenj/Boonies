@@ -3,10 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/editarCliente.css">
     <title>editar cliente</title>
 </head>
 <body>
-    <h1>editar cliente</h1>
+<div class="container">
+    <h1>Editar cliente</h1>
     <?php
     $banco = "dadosCliente.json";
     if (isset($_GET['index']) && file_exists($banco)) {
@@ -33,6 +35,8 @@
             }
         }
     ?>
+
+
     <form method="post">
         <div>
             <input type="text" name="nome" value="<?php echo $cliente['nome']; ?>" placeholder="Nome" required>
@@ -59,5 +63,7 @@
     }
     ?>
     <a href="listaClientes.php">Voltar para lista de clientes</a>
+    </div>
+
 </body>
 </html>

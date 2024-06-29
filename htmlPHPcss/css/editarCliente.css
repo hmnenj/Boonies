@@ -1,0 +1,88 @@
+@font-face {
+    font-family: 'playlist';
+    src: url('../../fonte/Playlist Script.otf');
+}
+
+body {
+    background-color: #E6AD9C;
+    font-family: 'playlist';
+    padding: 10px;
+    color: #ffff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+h1 {
+    color: #ffff;
+    margin-bottom: 20px;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: rgba(255, 255, 255, 0.1);
+    padding: 20px;
+    border-radius: 10px;
+    width: 80%;
+    max-width: 400px;
+}
+
+form div {
+    margin-bottom: 10px;
+}
+
+form input {
+    border-radius: 25px;
+    background-color: #ffff;
+    opacity: 0.5;
+    padding: 13px 20px;
+    text-align: center;
+    font-size: 16px;
+    margin: 4px 0;
+    border: none;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+form input::placeholder {
+    color: #E6AD9C;
+    text-align: left;
+}
+
+button {
+    border-radius: 25px;
+    background-color: #ffff;
+    opacity: 0.5;
+    padding: 13px 20px;
+    text-align: center;
+    font-size: 16px;
+    margin: 8px 0;
+    transition-duration: 0.4s;
+    cursor: pointer;
+    border: none;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+button:hover {
+    background-color: gray;
+    color: #ffff;
+}
+
+a {
+    font-family: 'playlist';
+    color: #ffff;
+    margin-top: 20px;
+    text-align: center;
+    display: block;
+}
+
+a:visited {
+    color: #ffff;
+}
+
+

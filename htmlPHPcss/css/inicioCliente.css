@@ -1,0 +1,86 @@
+@font-face {
+    font-family: 'playlist';
+    src: url('../../fonte/Playlist\ Script.otf');
+}
+
+body {
+    background-color: #E6AD9C;
+    font-family: 'playlist';
+    padding: 0;
+    color: #ffff;
+    margin: 0;
+}
+
+header {
+    background-color: rgba(255, 255, 255, 0.1);
+    padding: 10px;
+}
+
+.flex-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+button {
+    background-color: #ffff;
+    border: none;
+    border-radius: 25px;
+    padding: 10px 20px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+button a {
+    text-decoration: none;
+    color: #E6AD9C;
+    font-size: larger;
+}
+
+button:hover {
+    background-color: gray;
+}
+
+.carrinho {
+    font-size: larger;
+    color: #ffff;
+}
+
+.carrinho a {
+    color: #ffff;
+    text-decoration: none;
+}
+
+.logo img {
+    max-width: 100%;
+}
+
+h1 {
+    text-align: center;
+}
+
+ul.product-list {
+    list-style-type: none;
+    padding: 0;
+}
+
+.product-item {
+    margin: 20px 0;
+}
+
+.product-item img {
+    display: block;
+    margin: 0 auto 10px;
+}
+
+.product-item a {
+    text-decoration: none;
+    color: #ffff;
+    font-size: larger;
+    text-align: center;
+    display: block;
+}
+
+.product-item a:hover {
+    text-decoration: underline;
+}

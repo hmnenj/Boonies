@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./css/produto.css">
+    <link rel="stylesheet" href="./css/cadastroProduto.css">
     <title>bonny's - cadastro de produto</title>
 </head>
 <body>
@@ -41,7 +41,6 @@
         $imagemTmp = $imagem['tmp_name'];
         $imagemDestino = 'uploads/' . $imagemNome;
 
-
         if (!is_dir('uploads')) {
             mkdir('uploads', 0777, true);
         }
@@ -55,12 +54,10 @@
                 $dados = json_decode($extrair_dados, true);
             }
 
-
             $novo_id = 1;
             if (!empty($dados)) {
                 $novo_id = end($dados)['id'] + 1;
             }
-
 
             $novo_dado = [
                 'id' => $novo_id,

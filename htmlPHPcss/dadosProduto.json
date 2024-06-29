@@ -1,0 +1,18 @@
+[
+    {
+        "id": 1,
+        "nome": "Uma fam\u00edlia feliz ",
+        "preco": "45",
+        "descricao": "Eva tem a vida perfeita. Seu marido \u00e9 um jovem advogado em ascens\u00e3o. Suas filhas g\u00eameas s\u00e3o lindas, inteligentes e saud\u00e1veis. Seu trabalho, a arte reborn, \u00e9 um sucesso na internet. \u00c0 sua volta, tudo est\u00e1 \u00e0 m\u00e3o: o Blue Paradise, condom\u00ednio fechado de classe m\u00e9dia-alta na Barra da Tijuca, oferece todo tipo de servi\u00e7o para que ela n\u00e3o precise sair do conforto de seu lar. Eva tem a vida perfeita \u2015 at\u00e9 descobrir que est\u00e1 gr\u00e1vida e seu mundo virar de cabe\u00e7a para baixo.\r\nConhecido por seus suspenses de tirar o f\u00f4lego, com mais de 500 mil exemplares vendidos, Raphael Montes inova ao come\u00e7ar este thriller psicol\u00f3gico pelo \u00faltimo cap\u00edtulo. Assim, como uma bomba-rel\u00f3gio prestes a detonar, acompanhamos os caminhos surpreendentes e as tens\u00f5es que levam essa fam\u00edlia feliz a um final avassalador.\r\n\r\nUma hist\u00f3ria original de Raphael Montes deu origem ao livro e ao longa-metragem Uma fam\u00edlia feliz , com Grazi Massafera e Reynaldo Gianecchini e dire\u00e7\u00e3o de Jos\u00e9 Eduardo Belmonte.\r\n\r\n\u201cUm thriller que coloca o dedo na ferida das fam\u00edlias idealizadas.\u201d \u2015 Vera Iaconelli\r\n\r\n\u201cUm suspense arrebatador! Eva \u00e9 uma personagem complexa, vive no fio da navalha sob expectativas sociais tentando equilibrar as exig\u00eancias da maternidade e as press\u00f5es de uma vida de apar\u00eancias. Sem d\u00favida, muitas mulheres v\u00e3o se identificar. Essa hist\u00f3ria me arrepiou desde o primeiro momento!\u201d \u2015 Grazi Massafera",
+        "categoria": "Suspense",
+        "imagem": "uploads\/familiafeliz.jpg"
+    },
+    {
+        "id": 2,
+        "nome": "Hilda Furac\u00e3o",
+        "preco": "65",
+        "descricao": "Hilda Furac\u00e3o passa-se em Belo Horizonte no in\u00edcio dos anos 60, Hilda, a Garota do Mai\u00f4 Dourado, enfeiti\u00e7ava os homens na beira da piscina em um dos mais tradicionais clubes, o Minas T\u00eanis. Por algum motivo secreto muda-se para o quarto 304 do Maravilhoso Hotel, na zona bo\u00eamia da cidade. Transformada em Hilda Furac\u00e3o, a musa er\u00f3tica tira o sono da cidade. Sua vida de fada sexual cruza-se com os sonhos de tr\u00eas rapazes vindos do interior: um \u00e9 inspirado no not\u00f3rio Frei Betto, que queria ser santo, mas se tornaria frade franciscano, l\u00edder pol\u00edtico e escritor. Outro queria ser ator em Hollywood \u2015 torna-se dom Juan de aluguel. O terceiro, aquele que queria ter sua Sierra Maestra, \u00e9 o pr\u00f3prio Roberto, narrador da hist\u00f3ria. Hilda Furac\u00e3o \u00e9 o desafio que o santo tem que enfrentar. O romance foi transformado em miniss\u00e9rie de grande sucesso pela TV Globo, com Ana Paula Ar\u00f3sio no papel de Hilda.",
+        "categoria": "Romance",
+        "imagem": "uploads\/hildafuracao.jpg"
+    }
+]
