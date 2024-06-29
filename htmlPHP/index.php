@@ -17,11 +17,11 @@
         <div>
             <button><a href="./cadastroProduto.php">vender</a></button>
         </div>
-        <div class="search">
+       <!-- <div class="search">
             <form action="#">
             <input type="text" class="custom-search" placeholder="pesquisar:" name="search">
             </form>
-        </div>
+        </div> -->
 
     
     <div class="carrinho">

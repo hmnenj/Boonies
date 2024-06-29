@@ -21,7 +21,7 @@ if (isset($_GET['index'])) {
             if (file_put_contents($banco, $json)) {
                 echo "<script type='text/javascript'>
                 alert('Produto apagado com sucesso!');
-                window.location.href = 'produtosLista.php';
+                window.location.href = 'listaProdutos.php';
                 </script>";
             } else {
                 echo "Erro ao apagar produto";

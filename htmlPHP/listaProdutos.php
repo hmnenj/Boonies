@@ -9,7 +9,7 @@
 </head>
 <body>
     <div class= "flex-container">
-<a class= "logo" href= ./index.php><img src="./img/logo.png" alt="bonny's"></a>
+<a class= "logo" href= ./index.php><img src="./img/logo.png" alt="bonny's" width='150' height='150'></a>
 <h1>lista de produtos</h1></div>
     <?php
     $banco = "dadosProduto.json";
@@ -20,7 +20,8 @@
         echo "<ul>";
         foreach ($produtos as $index => $produto) {
             echo "<li>";
-            echo "<a href='detalhesProduto.php?index=$index'>" . $produto['nome'] . "</a>";
+            echo "<a href='detalhesProduto.php?index=$index'><img src='./" . $produto['imagem'] . "'width='60' height='80'></a>";
+            echo "<a href='apagarProduto.php?index=$index'>excluir produto</a>";
             echo "</li>";
         }
         echo "</ul>";
